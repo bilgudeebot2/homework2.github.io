@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Миний веб сайт // Cybernetic</title>
+    <style>
+        /* Cyber-punk / Futuristic Theme Variable-ууд */
+        :root {
+            --bg-color: #0b0e14;
+            --panel-bg: rgba(18, 24, 38, 0.75);
+            --primary-neon: #6200ff;
+            --secondary-neon: #ff0055;
+            --text-main: #e2e8f0;
+            --text-dim: #94a3b8;
+            --cyber-glow: 0 0 15px rgba(0, 243, 255, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            /* Саарал торон торлолын сугалбар */
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(0, 243, 255, 0.1) 0%, transparent 50%),
+                linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 30px 30px, 30px 30px;
+        }
+
+        /* Header хэсэг */
+        .header {
+            background: rgba(134, 6, 219, 0.9);
+            border-bottom: 1px solid rgba(76, 0, 255, 0.3);
+            box-shadow: var(--cyber-glow);
+            text-align: center;
+            padding: 30px 20px 20px 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #fff;
+            text-shadow: 0 0 10px var(--primary-neon), 0 0 20px var(--primary-neon);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .nav a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 12px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: var(--primary-neon);
+            border-color: var(--primary-neon);
+            box-shadow: var(--cyber-glow);
+            background: rgba(84, 8, 207, 0.05);
+            border-radius: 4px;
+        }
+
+        /* Эх бие болон Картууд */
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        .welcome-title {
+            color: #fff;
+            font-size: 32px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-shadow: 0 0 8px var(--secondary-neon);
+        }
+
+        .welcome-text {
+            font-size: 16px;
+            margin-bottom: 35px;
+            color: var(--text-dim);
+        }
+
+        .card {
+            background: var(--panel-bg);
+            border: 1px solid rgba(119, 0, 255, 0.2);
+            border-left: 4px solid var(--primary-neon);
+            width: 100%;
+            max-width: 460px;
+            padding: 25px 25px;
+            border-radius: 6px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(8px);
+            text-align: left;
+            margin-bottom: 25px;
+            position: relative;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary-neon);
+            box-shadow: 0 0 20px rgba(150, 9, 245, 0.25);
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--primary-neon);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Картын гарчигны урдах футуристик тэмдэгт */
+        .card h3::before {
+            content: '>';
+            color: var(--secondary-neon);
+            font-weight: bold;
+        }
+
+        .card p {
+            font-size: 15px;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        /* Footer хэсэг */
+        .footer {
+            background: rgba(129, 10, 184, 0.95);
+            border-top: 1px solid rgba(121, 9, 226, 0.15);
+            color: var(--text-dim);
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 13px;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Миний веб сайт</h1>
+        <nav class="nav">
+            <a href="#">Нүүр</a>
+            <a href="#">Миний тухай</a>
+            <a href="#">Холбоо барих</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2 class="welcome-title">Сайн байна уу!</h2>
+        <p class="welcome-text">Миний веб сайтад тавтай морилно уу.</p>
+
+        <div class="card">
+            <h3>Миний хобби</h3>
+            <p>Би спорт тоглох дуртай.</p>
+        </div>
+
+        <div class="card">
+            <h3>Миний зорилго</h3>
+            <p>Ирээдүйд программист болохыг хүсдэг.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Миний веб сайт</p>
+        <p>Бүх эрх хуулиар хамгаалагдсан.</p>
+    </footer>
+
+</body>
+</html>

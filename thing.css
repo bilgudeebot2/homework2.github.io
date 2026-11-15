@@ -1,0 +1,99 @@
+/* Ерөнхий тохиргоо */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header хэсэг */
+.header {
+    background-color: #31356e;
+    color: white;
+    text-align: center;
+    padding: 30px 20px 20px 20px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: opacity 0.2s;
+}
+
+.nav a:hover {
+    opacity: 0.8;
+}
+
+/* Эх бие болон Картууд */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.welcome-title {
+    color: #5c09c9;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.welcome-text {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #390377;
+}
+
+.card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.card p {
+    font-size: 16px;
+    color: #222;
+}
+
+/* Footer хэсэг */
+.footer {
+    background-color: #31356e;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
